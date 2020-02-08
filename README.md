@@ -1,6 +1,6 @@
-TAREAS: 
-
--SA-TAREAS-201314646
+SA-TAREAS-201314646
+Carlos Josue Monterroso Barrios
+201314646
 
 Clonar el repositorio
 Utilizar el comando para copiar la información
