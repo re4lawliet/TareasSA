@@ -8,33 +8,38 @@ class ClientServer extends Server {
   constructor () {
     super(3002)
     super.routers(routerclient)
-    this.header = '****** MENU DE COMIDA ******'
-    this.footer = '******  GRACIAS!! ******'
-    this.oHeader = '------------------   PEDIDO   ------------------'
-    this.oFooter = '------------------    FIN     ------------------'
+    this.header = 'MENU RESTAURANTE FISH'
+    this.footer = 'GRACIAS'
+    this.oHeader = '******************   PEDIDO   ******************'
+    this.oFooter = '******************    FIN     ******************'
     this.divider = '****************'
-    this.reqAns = '------------- Esperando  respuesta -------------'
-    this.msn = 'Elegir una opción\n'
-    this.address = 'Ingrese su dirección'
+    this.reqAns = '************* Esperando  respuesta **************'
+    this.msn = 'Elija una opción: \n'
+    this.address = 'Ingrese su dirección: '
     this.menuOptions = {
-      C0101: [50, 'Hamburguesa'],
-      C0102: [75, 'Pizza'],
-      C0103: [15, 'Papas'],
-      C0104: [50, 'Tacos'],
-      C0105: [36, 'Burrito'],
-      C0106: [99, 'Bebida'],
-      C0107: [50, 'Pollo'],
-      C0108: [75, 'Mariscos'],
-      C0109: [15, 'Arroz chino'],
-      C0110: [50, 'Orange Chicken'],
-      C0111: [36, 'Chao Mein']
+      C0101: [50, 'Tamales'],
+      C0102: [75, 'Chuchitos'],
+      C0103: [15, 'Atol de Elote'],
+      C0104: [50, 'Arroz en leche'],
+      C0105: [36, 'Tostadas '],
+      C0106: [99, 'Chuchitos de chipilin'],
+      C0107: [50, 'Tacos'],
+      C0108: [75, 'Shucos'],
+      C0109: [15, 'Caldo de Gallina'],
+      C0110: [50, 'Churrasco'],
+      C0111: [36, 'Pepian']
     }
     this.orderinfo = {}
   }
 
   async placeOrder () {
     const data = await fetchQuery('http://127.0.0.1:3003/accept', 'POST', this.orderinfo)
-    console.log(`La orden se envió correctamente, pedido no. ${data.id}`)
+    console.log(`Orden Enviada a Recepcion: Numero de Pedido: ${data.id}`)
+  }
+
+  async placeOrderMoto () {
+    const data = await fetchQuery('http://127.0.0.1:3004/accept', 'POST', this.orderinfo)
+    console.log(`Orden Enviada a Motoristas: Numero de Pedido: ${data.id}`)
   }
 
   printOrder () {
@@ -77,6 +82,7 @@ class ClientServer extends Server {
       await this.saveAdress()
       console.log(this.footer)
       await this.placeOrder()
+      //await this.placeOrderMoto()
       console.log(this.reqAns)
     } else {
       console.log('Orden cancelada...')

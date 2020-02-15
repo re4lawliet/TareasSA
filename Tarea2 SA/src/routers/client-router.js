@@ -14,4 +14,4 @@ class ClientRouter {
 
 const clientrouter = new ClientRouter()
 routerV1.post('/accept', clientrouter.acceptOrder)
-routerV1.get('/hola', clientrouter.hola)
+//routerV1.get('/hola', clientrouter.hola)
