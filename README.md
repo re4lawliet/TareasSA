@@ -42,3 +42,4 @@ npm start
 7. ejecutar node -r esm index.js
 8. ingresar a la carpeta /src/servers/recepction/
 9. ejecutar node -r esm index.js
+10. Video: https://youtu.be/N5QrSAEj5BU
