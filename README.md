@@ -43,3 +43,22 @@ npm start
 8. ingresar a la carpeta /src/servers/recepction/
 9. ejecutar node -r esm index.js
 10. Video: https://youtu.be/N5QrSAEj5BU
+
+
+/**********************************************************/
+/***************       TAREA 3           ******************/
+/**********************************************************/
+
+1. npm init -y
+2. npm i node-fetch
+3. npm i express
+4. npm i esm
+5. pegar carpeta /src junto a la carpeta /node-modules
+6. ingresar a la carpeta /src/servers/cliente/
+7. ejecutar node -r esm index.js
+8. ingresar a la carpeta /src/servers/recepction/
+9. ejecutar node -r esm index.js
+8. ingresar a la carpeta /src/servers/motorista/
+9. ejecutar node -r esm index.js
+8. ingresar a la carpeta /src/servers/esb/
+9. ejecutar node -r esm index.js
