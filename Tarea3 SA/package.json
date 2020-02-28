@@ -12,6 +12,10 @@
   "dependencies": {
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-gzip": "^1.4.2",
+    "gulp-tar": "^3.1.0",
+    "gzip": "^0.1.0",
     "node-fetch": "^2.6.0"
   }
 }
