@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"./node_modules/.bin/netlify-lambda serve src",
-    "build":"./node_modules/.bin/netlify-lambda build src" 
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +17,9 @@
     "gulp-gzip": "^1.4.2",
     "gulp-tar": "^3.1.0",
     "gzip": "^0.1.0",
-    "node-fetch": "^2.6.0"
+    "netlify": "^3.1.0",
+    "netlify-lambda": "^1.6.3",
+    "node-fetch": "^2.6.0",
+    "serveless": "0.0.2"
   }
 }
