@@ -62,3 +62,21 @@ npm start
 9. ejecutar node -r esm index.js
 8. ingresar a la carpeta /src/servers/esb/
 9. ejecutar node -r esm index.js
+
+
+/**********************************************************/
+/***************       TAREA 6           ******************/
+/**********************************************************/
+
+1. docker ps -a
+2. docker-compose build
+3. docker-compose up
+4. ingresar a localhost:3000
+5. VIDEO: https://youtu.be/EDNgPERVUh0
+
+
+
+
+
+
+
